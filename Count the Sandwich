@@ -1,0 +1,22 @@
+#include<iostream>
+using namespace std;
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+    int t;
+    cin>>t;
+    while(t--)
+    {
+        int n,c,k,sum=0;
+        cin>>n>>k;
+        sum=n;
+        c=n;
+        while(n>0)
+        {
+            n=c/k;
+            c=n +(c%k);
+            sum+=n;
+        }
+        cout<<sum<<"\n";
+    }
+    return 0;
+}
