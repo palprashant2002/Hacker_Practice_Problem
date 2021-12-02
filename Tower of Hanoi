@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+void TOH(char x,char y,char z,int n)
+{
+    if(n==0)
+        return;
+    else
+    {
+        TOH(x,z,y,n-1);
+        printf("Moving ring %d from %c to %c\n\n",n,x,z);
+        TOH(y,x,z,n-1);
+    }
+}
+    
+int main() {
+
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */   
+    int n;
+    scanf("%d",&n);
+    TOH('A','B','C',n);
+    return 0;
+}
