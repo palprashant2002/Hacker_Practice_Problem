@@ -1,0 +1,17 @@
+#include <iostream>
+
+using namespace std;
+int main() {
+    int num[4],sum=0;
+    for(int i=0;i<4;i++)
+    {
+        cin>>num[i];
+    }
+    for(int i=0;i<3;i++)
+    {
+        cout<<"P"<<i+1<<" (WT="<<sum<<"), ";
+        sum+=num[i];
+    }
+    cout<<"P4"<<" (WT="<<sum<<") ";
+    return 0;
+}
